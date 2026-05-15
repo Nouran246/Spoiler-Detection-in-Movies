@@ -167,13 +167,12 @@ Spoiler⚠
 
 ---
 
-## 👩‍💻 Author
-
-Built as part of an AI/NLP learning project focusing on:
-
-* Transformer models
-* Text classification
-* Real-world deployment using Flask
+## 👩‍💻 Authors
+- [Malak Mohamed](https://github.com/MalakMohameed)
+- [Yahia-Elshobokshy](https://github.com/Yahia-Elshobokshy)
+- [Nouran Hassan](https://github.com/Nouran246)
+- [Roaa Khaled](https://github.com/Rowlkh)
+- [Daniel Michel](https://github.com/DanielMichel305)
 
 ---
 
