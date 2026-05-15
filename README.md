@@ -134,8 +134,7 @@ http://127.0.0.1:5000
 ### Output:
 
 ```
-Spoiler Review
-Confidence: 78%
+Spoiler⚠
 ```
 
 ---
