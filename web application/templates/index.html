@@ -1,21 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Review Spoiler Detector</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoiler Detection AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
 <body>
 
-    <h1>Review Spoiler Detector</h1>
+    <div class="background-glow"></div>
+    <div class="background-glow2"></div>
 
-    <form method="POST">
-        <textarea name="review" rows="6" cols="60" placeholder="Enter review..."></textarea>
-        <br><br>
-        <button type="submit">Detect Spoiler</button>
-    </form>
+    <div class="container">
 
-    {% if prediction %}
-        <h2>{{ prediction }}</h2>
-    {% endif %}
+        <div class="badge">
+            AI • NLP • DistilBERT Powered
+        </div>
+
+        <h1>Spoiler Detection AI</h1>
+
+        <p class="subtitle">
+            Advanced deep learning system that analyzes reviews and predicts whether they contain spoilers using transformer-based natural language processing.
+        </p>
+
+        <form method="POST">
+
+            <textarea
+                name="review"
+                placeholder="Paste a movie or book review here..."
+                required
+            ></textarea>
+
+            <div class="button-wrapper">
+                <button type="submit">
+                    Detect Spoiler
+                </button>
+            </div>
+
+        </form>
+
+        {% if prediction %}
+        <div class="result-card">
+            <div class="result-title {% if 'Non' in prediction %}non-spoiler{% else %}spoiler{% endif %}">
+                {{ prediction }}
+            </div>
+        </div>
+        {% endif %}
+
+        <div class="footer">
+            Built with Flask • PyTorch • Transformers
+        </div>
+
+            </div>
 
 </body>
 </html>
